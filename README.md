@@ -26,7 +26,7 @@ The HitchHike [frontend](frontend/) consists of a mobile app built in React Nati
 * The app features some hardcoded endpoints that would need to be updated for functionality to be restored.
 * Additionally, many dependencies are out of date and may have vulnerabilities.
 
-### Buliding
+### Building
 
 To build the app run the commands:
 ```
