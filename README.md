@@ -1,39 +1,57 @@
-# Welcome to HitchHike!
+# HitchHike
 
-## The best way to get around.
+<p align="center">
+   <img src="assets/logo.png" width="200" height="200" alt="Logo"/>
+   <h3 align="center">Ridesharing for UCSC students!</h3>
+</p>
 
-### Downloading the app using the link:
+HitchHike is a carpooling and ridesharing app intended for use by UCSC students. It allows users to search and view available rides near them as well as post new rides.
 
-   https://drive.google.com/file/d/1gX4RNcS0mTrx4BXN3j2m9gmyT4dowdrV/view
+## Overview
 
-Make sure to allow installing APKs from Google Drive and bypass Play Protect when installing and running. 
+The HitchHike [frontend](frontend/) consists of a mobile app built in React Native and Expo. The [backend](backend/) consists of a Node.js application using Express.js and a custom in-memory database written in javascript. The backend _was_ hosted on AWS EC2.
 
-### Running the app easily (Android):
-1. Install the Expo app from the Play Store.
-2. Go to: https://expo.io/@ssuresh3/frontend
-3. Scan the QR code on the webpage.
-4. Enjoy! (Please report if this doesn't work)
+## Getting Started
 
-### How to run the app the harder way:
+### Dependencies
 
-1. Please clone the repository to your local machine.
+* `npm`
+* `expo-cli`
+* [Expo](https://expo.dev) mobile app
 
-2. Make sure to download `npm` and `expo-cli`.
+### Before Using
 
-3. Download the Expo app on your phone.
+* The backend Node application needs to be publicly hosted.
+* Some public APIs such as Google Maps and SendGrid need to be renewed.
+* The app features some hardcoded endpoints that would need to be updated for functionality to be restored.
+* Additionally, many dependencies are out of date and may have vulnerabilities.
 
-4. Afterwards on your local machine, go to `hitchhike/frontend`
+### Buliding
 
-5. Type `npm start`
+To build the app run the commands:
+```
+$ cd hitchhike/frontend
+$ npm install
+$ npm start
+```
+Then scan the QR code to open HitchHike in the Expo app.
 
-6. If you are on iOS, scan the QR code using the camera app. Follow the notification to the Expo app, where the HitchHike app will run.
+## Design
 
-   If you are on Android, scan the QR code directly from the Expo app. HitchHike will automatically open up.
+Since HitchHike will likely never be run again some screenshots are available in [assets](assets/).
 
-### Troubleshooting:
+<p align="center">
+   <img src="assets/login.png" width="200" alt="Login"/>
+   <img src="assets/signup.png" width="200" alt="Signup"/>
+   <img src="assets/new-ride.png" width="200" alt="New ride"/>   
+</p>
 
-* Make sure you have the latest version of Node.JS installed on your computer.
+<p align="center">
+   <img src="assets/autocomplete.png" width="200" alt="Autocomplete"/>
+   <img src="assets/all-rides.gif" width="200" alt="Viewing rides"/> 
+   <img src="assets/select-ride.gif" width="200" alt="Selecting ride"/> 
+</p>
 
-* If you are having trouble with missing npm modules, run the command `npm install` in the `hitchhike/frontend` directory. This should install all of the necessary modules. **This may take a few minutes.**
+## Acknowledgments
 
-* Open an issue in the repository to report any bugs. We will resolve these issues as soon as possible. We appreciate your support through the development process, and we hope you enjoy the app!
+This app was created as part of coursework for [CSE 115A: Software Engineering](https://catalog.ucsc.edu/en/Current/General-Catalog/Courses/CSE-Computer-Science-and-Engineering/Upper-Division/CSE-115A) by a team of students.
